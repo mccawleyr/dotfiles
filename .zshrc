@@ -2,6 +2,7 @@
 # .zshrc
 #
 # @author Jeff Geerling
+# edited by Ryan McCawley
 #
 
 # Colors.

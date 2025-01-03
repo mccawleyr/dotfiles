@@ -87,12 +87,12 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Enable Keyboard Navigation
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
-
-# Save screenshots to Downloads folder.
-defaults write com.apple.screencapture location -string "${HOME}/Downloads"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -177,6 +177,29 @@ defaults write com.apple.dock showhidden -bool true
 
 # Enable the 'reduce transparency' option. Save GPU cycles.
 defaults write com.apple.universalaccess reduceTransparency -bool true
+
+# Faster Dock Hiding
+defaults write com.apple.dock autohide-delay -float 0; defaults write com.apple.dock autohide-time-modifier -int 0
+
+#Dock on left position
+defaults write com.apple.dock orientation -string left
+
+#Minimize Windows Using Scale Effect
+defaults write com.apple.dock mineffect -string scale
+
+#Automatically Show and Hide the Dock
+defaults write com.apple.dock autohide -bool true
+
+#Animate opening applications
+defaults write com.apple.dock launchanim -bool true
+
+#Show indicators for open apps
+defaults write com.apple.dock show-process-indicators -bool true
+
+#Turn off Suggestions and recent apps
+defaults write com.apple.dock show-recents -bool false
+
+
 
 # Hot corners
 # Possible values:
